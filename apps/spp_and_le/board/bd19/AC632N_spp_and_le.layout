@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<FileVersion major="1" minor="0" />
+	<ActiveTarget name="Release" />
+	<File name="..\..\include\app_config.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="663" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="board_ac632n_demo.c" open="1" top="1" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="12425" topLine="370" />
+		</Cursor>
+	</File>
+	<File name="board_ac632n_demo_cfg.h" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="4057" topLine="50" />
+		</Cursor>
+	</File>
+	<File name="..\..\7PIN_led8888.c" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="10357" topLine="550" />
+		</Cursor>
+	</File>
+	<File name="..\..\..\..\include_lib\driver\cpu\bd19\asm\power_interface.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="3363" topLine="152" />
+		</Cursor>
+	</File>
+	<File name="board_ac6321a_demo_cfg.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="12193" topLine="196" />
+		</Cursor>
+	</File>
+	<File name="..\..\..\..\include_lib\system\timer.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="9062" topLine="250" />
+		</Cursor>
+	</File>
+	<File name="..\..\..\..\include_lib\system\event.h" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="5744" topLine="149" />
+		</Cursor>
+		<Folding>
+			<Collapse line="141" />
+			<Collapse line="169" />
+		</Folding>
+	</File>
+	<File name="..\..\..\..\cpu\bd19\tools\bluetooth\standard\download.bat" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="778" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="..\..\..\..\cpu\bd19\tools\bluetooth\standard\isd_config.ini" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="610" topLine="18" />
+		</Cursor>
+	</File>
+</CodeBlocks_layout_file>
