@@ -46,6 +46,7 @@ objs += \
 	$(ROOT)/apps/$(APP_CASE)/app_power_manage.o \
 	$(ROOT)/apps/$(APP_CASE)/rtc_alarm.o \
 	$(ROOT)/apps/$(APP_CASE)/usb_hid_devices.o \
+	$(ROOT)/apps/$(APP_CASE)/7PIN_led8888.o \
 	$(ROOT)/apps/common/update/update.o \
     $(ROOT)/apps/common/update/uart_update.o \
     $(ROOT)/apps/common/update/testbox_update.o \

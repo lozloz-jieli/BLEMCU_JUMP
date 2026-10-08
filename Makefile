@@ -53,8 +53,8 @@ export SoC?=bd19
 #export APP_CASE?=qcy_case
 #export APP_CASE?=soundbox
 #export APP_CASE?=dongle
-#export APP_CASE?=spp_and_le
-export APP_CASE?=hid
+export APP_CASE?=spp_and_le
+#export APP_CASE?=hid
 #export APP_CASE?=mesh
 #export APP_CASE?=watch
 #export APP_CASE?=iot
@@ -82,7 +82,7 @@ export MAKE_RULE = $(ROOT)/rule.mk
 export AR_DIR = \
   	$(ROOT)/include_lib/liba/$(CPU)
 
-export AR_TARGET = $(shell find lib -maxdepth 1 -type d)
+export AR_TARGET = $(shell if [ -d lib ]; then find lib -maxdepth 1 -type d; fi)
 
 # --------------common var end-----------------------
 
@@ -102,29 +102,23 @@ endif
 
 
 
-.PHONY: all clean lib clean_lib libs clean_libs dry_run debug usage cbp winmake app
+.PHONY: all clean lib clean_lib libs clean_libs dry_run debug usage cbp winmake app prepare_out
 
-all: pre_make $(ADDITION_DEP)
+all: pre_make prepare_out
+	@if [ -f lib/Makefile ]; then $(MAKE) -C lib || exit 1; fi
 	@$(MAKE) -C apps || exit 1
 
-app: pre_make
+app: pre_make prepare_out
 	@$(MAKE) -C apps || exit 1
 
-libs:
+libs: prepare_out
+	@if [ -f lib/Makefile ]; then $(MAKE) -C lib || exit 1; else echo "Using prebuilt libraries in include_lib/liba"; fi
+
+# Linux builds place objects under $$HOME/tmp. Create that mirror before compile.
+prepare_out:
 ifneq ($(cibuild),y)
-	@if [ ! -d $(OUTPUT_PREFIX)$(ROOT) ]; then \
-		find $(ROOT) -type d | while read dir_name; do \
-			mkdir -p $(OUTPUT_PREFIX)$$dir_name; \
-		done \
-	else \
-		find $(ROOT) -type d | while read dir_name; do \
-			if [ ! -d $(OUTPUT_PREFIX)$$dir_name ]; then \
-				mkdir -p $(OUTPUT_PREFIX)$$dir_name; \
-			fi \
-		done \
-	fi
+	@find $(ROOT) -type d -exec mkdir -p $(OUTPUT_PREFIX){} \;
 endif
-	@$(MAKE) -C lib || exit 1
 
 clean:
 	@echo "Clean ..."
