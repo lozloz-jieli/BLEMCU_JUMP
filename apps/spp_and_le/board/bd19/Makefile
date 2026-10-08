@@ -28,3 +28,4 @@ objs += \
 	  $(ROOT)/apps/$(APP_CASE)/board/$(CPU)/board_ac6329c_demo.o \
 	  $(ROOT)/apps/$(APP_CASE)/board/$(CPU)/board_ac6329e_demo.o \
 	  $(ROOT)/apps/$(APP_CASE)/board/$(CPU)/board_ac6329f_demo.o \
+	  $(ROOT)/apps/$(APP_CASE)/board/$(CPU)/lost.o \
